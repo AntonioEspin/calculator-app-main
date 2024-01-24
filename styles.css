@@ -1,0 +1,182 @@
+:root {
+  /* ### Theme 1 */
+  /* #### Backgrounds */
+  --Very-dark-desaturated-blue-main /*(main background)*/: hsl(222, 26%, 31%);
+  --Very-dark-desaturated-blue /*(toggle background, keypad background)*/: hsl(223, 31%, 20%);
+  --Very-dark-desaturated-blue-screen /*(screen background)*/: hsl(224, 36%, 15%);
+  /* #### Keys */
+  --Desaturated-dark-blue-background /*(key background)*/: hsl(225, 21%, 49%);
+  --Desaturated-dark-blue-key /*(key shadow)*/: hsl(224, 28%, 35%);
+  --Red /*(key background, toggle)*/: hsl(6, 63%, 50%);
+  --Dark-red /*(key shadow)*/: hsl(6, 70%, 34%);
+  --Light-grayish-orange /*(key background)*/: hsl(30, 25%, 89%);
+  --Grayish-orange /*(key shadow)*/: hsl(28, 16%, 65%); 
+  /* #### Text */
+  --Very-dark-grayish-blue: hsl(221, 14%, 31%);
+  --White: hsl(0, 0%, 100%);
+
+  /* ### Theme 2 */
+  /* #### Backgrounds */
+  --Light-gray /*(main background)*/: hsl(0, 0%, 90%);
+  --Grayish-red /*(toggle background, keypad background)*/: hsl(0, 5%, 81%);
+  --Very-light-gray /*(screen background)*/: hsl(0, 0%, 93%);
+  /* #### Keys */
+  --Dark-moderate-cyan /*(key background)*/: hsl(185, 42%, 37%);
+  --Very-dark-cyan /*(key shadow)*/: hsl(185, 58%, 25%);
+  --Orange /*(key background, toggle)*/: hsl(25, 98%, 40%);
+  --Dark-orange /*(key shadow)*/: hsl(25, 99%, 27%);
+  --Light-grayish-yellow /*(key background)*/: hsl(45, 7%, 89%);
+  --Dark-grayish-orange /*(key shadow)*/: hsl(35, 11%, 61%);
+  /* #### Text */
+  --Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+  --White /*(text)*/: hsl(0, 0%, 100%);
+
+  /* ### Theme 3 */
+  /* #### Backgrounds */
+  --Very-dark-violet /*(main background)*/: hsl(268, 75%, 9%);
+  --Very-dark-violet /*(toggle background, keypad background, screen background)*/: hsl(268, 71%, 12%);
+  /* #### Keys */
+  --Dark-violet /*(key background)*/: hsl(281, 89%, 26%);
+  --Vivid-magenta /*(key shadow)*/: hsl(285, 91%, 52%);
+  --Pure-cyan /*(key background, toggle)*/: hsl(176, 100%, 44%);
+  --Soft-cyan /*(key shadow)*/: hsl(177, 92%, 70%);
+  --Very-dark-violet /*(key background)*/: hsl(268, 47%, 21%);
+  --Dark-magenta /*(key shadow)*/: hsl(290, 70%, 36%);
+  /* #### Text */
+  --Light-yellow: hsl(52, 100%, 62%);
+  --Very-dark-blue: hsl(198, 20%, 13%);
+  --White /*(text)*/: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'League Spartan', sans-serif;
+}
+
+body {
+  background-color: var(--Very-dark-desaturated-blue-main);
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 5% 1fr 5%;
+  grid-template-rows: auto auto auto 20px;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  align-content: center;
+  justify-content: center;
+  font-size: 3.2rem;
+  gap: 15px;
+}
+
+/* Section header (start) */
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+}
+
+.header span {
+  color: var(--White);
+}
+
+.header-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-toggle span {
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  margin-right: 20px;
+}
+/* Section header (end) */
+
+/* Section display (start) */
+.display {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  padding-right: 20px;
+  border-radius: 8px;
+  background-color: var(--Very-dark-desaturated-blue-screen);
+  color: var(--White);
+}
+/* Section display (end) */
+
+/* Section container-keypad (start) */
+.container-keypad {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(30px, 1fr));
+  gap: 15px;
+  background-color: var(--Very-dark-desaturated-blue);
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.container-keypad .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  height: 55px;
+  border-radius: 5px;
+  background-color: var(--Light-grayish-orange);
+  box-shadow: 0px 3px 0px 0px var(--Grayish-orange);
+  padding-top: 3px;
+  color: var(--Very-dark-grayish-blue);
+  cursor: pointer;
+}
+
+.container-keypad .buttons:nth-child(17) {
+  grid-column: 1 / 3;
+}
+
+.container-keypad .buttons:nth-child(18) {
+  grid-column: 3 / -1;
+  background-color: var(--Red);
+  box-shadow: 0px 3px 0px 0px var(--Dark-red);
+  color: var(--White);
+}
+
+.container-keypad .buttons:nth-child(4),
+.container-keypad .buttons:nth-child(17) {
+  font-size: 1.8rem;
+  color: var(--White);
+  background-color: var(--Desaturated-dark-blue-background);
+  box-shadow: 0px 3px 0px 0px var(--Desaturated-dark-blue-key);
+}
+
+.container-keypad .buttons:nth-child(8),
+.container-keypad .buttons:nth-child(12),
+.container-keypad .buttons:nth-child(15),
+.container-keypad .buttons:nth-child(16),
+.container-keypad .buttons:nth-child(18) {
+  font-size: 2rem;
+}
+/* Section container-keypad (end) */
+
+
+.attribution {
+  grid-column: 2 / 3;
+  grid-row: 4 / 5;
+}
