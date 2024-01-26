@@ -75,10 +75,12 @@ function handleToggle () {
       numbers.forEach(number => {
         number.style.backgroundColor = 'var(--Light-grayish-yellow)';
         number.style.boxShadow = '0px 3px 0px 0px var(--Dark-grayish-orange)';
+        number.style.color = 'var(--Very-dark-grayish-yellow)';
       })
       operations.forEach(operation => {
         operation.style.backgroundColor = 'var(--Light-grayish-yellow)';
         operation.style.boxShadow = '0px 3px 0px 0px var(--Dark-grayish-orange)';
+        operation.style.color = 'var(--Very-dark-grayish-yellow)';
       })
       delButton.style.backgroundColor = 'var(--Dark-moderate-cyan)';
       delButton.style.boxShadow = '0px 3px 0px 0px var(--Very-dark-cyan)'
@@ -86,33 +88,62 @@ function handleToggle () {
       resetButton.style.boxShadow = '0px 3px 0px 0px var(--Very-dark-cyan)';
       calculateButton.style.backgroundColor = 'var(--Orange)';
       calculateButton.style.boxShadow = '0px 3px 0px 0px var(--Dark-orange)';
+      calculateButton.style.color = 'var(--White)';
       break;
     case '3':
-      body.style.backgroundColor = 'var(--Very-dark-violet)';
+      body.style.backgroundColor = 'var(--Very-dark-violet-main)';
       colorFont.forEach(font => {
-        font.style.color = 'var(--Very-dark-grayish-yellow)';
+        font.style.color = 'var(--Light-yellow)';
       })
-      toggle.style.backgroundColor = 'var(--Grayish-red)';
-      display.style.color = 'var(--Very-dark-grayish-yellow)'
-      displayBackground.style.backgroundColor = 'var(--Very-light-gray)';
-      keypad.style.backgroundColor = 'var(--Grayish-red)';
+      toggle.style.backgroundColor = 'var(--Very-dark-violet)';
+      display.style.color = 'var(--Light-yellow)'
+      displayBackground.style.backgroundColor = 'var(--Very-dark-violet)';
+      keypad.style.backgroundColor = 'var(--Very-dark-violet)';
       numbers.forEach(number => {
-        number.style.backgroundColor = 'var(--Light-grayish-yellow)';
-        number.style.boxShadow = '0px 3px 0px 0px var(--Dark-grayish-orange)';
+        number.style.backgroundColor = 'var(--Very-dark-violet-key)';
+        number.style.boxShadow = '0px 3px 0px 0px var(--Dark-magenta)';
+        number.style.color = 'var(--Light-yellow)';
       })
       operations.forEach(operation => {
-        operation.style.backgroundColor = 'var(--Light-grayish-yellow)';
-        operation.style.boxShadow = '0px 3px 0px 0px var(--Dark-grayish-orange)';
+        operation.style.backgroundColor = 'var(--Very-dark-violet-key)';
+        operation.style.boxShadow = '0px 3px 0px 0px var(--Dark-magenta)';
+        operation.style.color = 'var(--Light-yellow)';
       })
-      delButton.style.backgroundColor = 'var(--Dark-moderate-cyan)';
-      delButton.style.boxShadow = '0px 3px 0px 0px var(--Very-dark-cyan)'
-      resetButton.style.backgroundColor = 'var(--Dark-moderate-cyan)';
-      resetButton.style.boxShadow = '0px 3px 0px 0px var(--Very-dark-cyan)';
-      calculateButton.style.backgroundColor = 'var(--Orange)';
-      calculateButton.style.boxShadow = '0px 3px 0px 0px var(--Dark-orange)';
+      delButton.style.backgroundColor = 'var(--Dark-violet)';
+      delButton.style.boxShadow = '0px 3px 0px 0px var(--Vivid-magenta)'
+      resetButton.style.backgroundColor = 'var(--Dark-violet)';
+      resetButton.style.boxShadow = '0px 3px 0px 0px var(--Vivid-magenta)';
+      calculateButton.style.backgroundColor = 'var(--Pure-cyan)';
+      calculateButton.style.boxShadow = '0px 3px 0px 0px var(--Soft-cyan)';
+      calculateButton.style.color = 'var(--Very-dark-blue)'
       break;
   
     default:
+      body.style.backgroundColor = 'var(--Very-dark-desaturated-blue-main)';
+      colorFont.forEach(font => {
+        font.style.color = 'var(--White)';
+      })
+      toggle.style.backgroundColor = 'var(--Very-dark-desaturated-blue)';
+      display.style.color = 'var(--White)'
+      displayBackground.style.backgroundColor = 'var(--Very-dark-desaturated-blue-screen)';
+      keypad.style.backgroundColor = 'var(--Very-dark-desaturated-blue)';
+      numbers.forEach(number => {
+        number.style.backgroundColor = 'var(--Light-grayish-orange)';
+        number.style.boxShadow = '0px 3px 0px 0px var(--Grayish-orange)';
+        number.style.color = 'var(--Very-dark-grayish-blue)';
+      })
+      operations.forEach(operation => {
+        operation.style.backgroundColor = 'var(--Light-grayish-orange)';
+        operation.style.boxShadow = '0px 3px 0px 0px var(--Grayish-orange)';
+        operation.style.color = 'var(--Very-dark-grayish-blue)';
+      })
+      delButton.style.backgroundColor = 'var(--Desaturated-dark-blue-background)';
+      delButton.style.boxShadow = '0px 3px 0px 0px var(--Desaturated-dark-blue-key)'
+      resetButton.style.backgroundColor = 'var(--Desaturated-dark-blue-background)';
+      resetButton.style.boxShadow = '0px 3px 0px 0px var(--Desaturated-dark-blue-key)';
+      calculateButton.style.backgroundColor = 'var(--Red';
+      calculateButton.style.boxShadow = '0px 3px 0px 0px var(--Dark-red)';
+      calculateButton.style.color = 'var(--White)'
       break;
   }
 }
